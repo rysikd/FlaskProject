@@ -1,7 +1,7 @@
 from flask import render_template
 from FirstFlaskProject import app
 
-from .settings import DATABASE
+from FirstFlaskProject.settings import DATABASE
 
 # app = Flask(__name__)
 
@@ -16,3 +16,6 @@ def hello_world():
         "index.html",
         book=book
     )
+
+if __name__ == "__main__":
+    app.run()

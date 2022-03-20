@@ -1,5 +1,5 @@
 import sqlite3
-from .settings import DATABASE
+from FirstFlaskProject.settings import DATABASE
 
 
 def create_db_for_books():

@@ -1,5 +1,5 @@
 !初期起動命令
-export FLASK_APP=FirstFlaskProject
+export FLASK_APP=main_flask.py
 flask run
 
 !heroku

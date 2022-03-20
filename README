@@ -3,8 +3,10 @@ export FLASK_APP=FirstFlaskProject
 flask run
 
 !heroku
-git remote -v
 heroku create !projectname
-heroku ps:scale web=1
 git push heroku master
+heroku ps:scale web=1
 heroku logs --tail
+
+!git
+git remote -v

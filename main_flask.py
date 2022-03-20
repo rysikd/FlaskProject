@@ -1,8 +1,6 @@
 from flask import render_template
-#from FirstFlaskProject import app
+#from FlaskProject import app
 from flask import Flask
-
-from FirstFlaskProject.settings import DATABASE
 
 app = Flask(__name__)
 

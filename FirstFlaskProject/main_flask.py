@@ -1,9 +1,10 @@
 from flask import render_template
-from FirstFlaskProject import app
+#from FirstFlaskProject import app
+from flask import Flask
 
 from FirstFlaskProject.settings import DATABASE
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
 @app.route("/")
 def hello_world():

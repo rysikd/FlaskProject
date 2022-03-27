@@ -1,22 +1,31 @@
-from flask import render_template
-#from FlaskProject import app
 from flask import Flask
-from flask_bootstrap5 import Bootstrap
+from flask import render_template
+from flask import request
+from flask import redirect
+from flask import abort
 
-app = Flask(__name__)
-#bootstrap = Bootstrap(app)
+app = Flask(__name__)    # Flaskインスタンス作成
 
-@app.route("/")
-def hello_world():
-    book = {
-        "title": "鬼滅の刃",
-        "price": "1yen",
-        "arrival_date": "today",
-    }
-    return render_template(
-        "index.html",
-        book=book
-    )
+f_data = ['サイトポリシー', 'プライバシーポリシー', 'サイトマップ']
 
-if __name__ == "__main__":
-    #app.run(debug=True, host='localhost', port=5555, threaded=True)
+@app.route('/', methods=['GET', 'POST'])
+def login_page():
+    global f_data
+
+    if request.method == 'GET':
+        return render_template('index.html', \
+            title='Bootstrap', \
+            message='Hello! Bootstrap!', \
+            data = f_data)
+
+    elif request.method == 'POST':
+        content = request.form.get('form')
+        return render_template('index.html', \
+            title = 'Bootstrap', \
+            message=content, \
+            data = f_data)
+    else:
+        return abort(404)
+
+if __name__ == '__main__':
+    app.run(debug=True, host = 'localhost', port=5222, threaded=True)    # Webアプリケーションの起動

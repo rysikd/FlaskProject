@@ -1,15 +1,19 @@
 <!-- index.htmlを継承してWebページを作成 -->
 {% extends "layout.html" %}
+
 <!-- loginページ -->
 {% block title %}
 <title>{{title}}</title>
 {% endblock %}
+
 {% block headline %}
 <h1 class="m-3">{{title}}</h1>
 {% endblock %}
+
 {% block content %}
 <p class="m-3">{{ message }}</p>
 {% endblock %}
+
 {% block footer %}
 <footer class="bg-info">
     <ul class="nav pull-right">

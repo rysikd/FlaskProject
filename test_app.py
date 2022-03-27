@@ -27,5 +27,12 @@ def login_page():
     else:
         return abort(404)
 
+@app.route("/サイトポリシー")
+def sitepolicy():
+    return render_template("index.html",
+            title = "サイトポリシー",
+            message="test_site",
+            data = f_data)
+
 if __name__ == '__main__':
     app.run(debug=True, host = 'localhost', port=5222, threaded=True)    # Webアプリケーションの起動

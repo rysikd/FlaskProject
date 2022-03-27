@@ -4,7 +4,7 @@ from flask import Flask
 from flask_bootstrap5 import Bootstrap
 
 app = Flask(__name__)
-bootstrap = Bootstrap(app)
+#bootstrap = Bootstrap(app)
 
 @app.route("/")
 def hello_world():
@@ -19,4 +19,4 @@ def hello_world():
     )
 
 if __name__ == "__main__":
-    app.run(debug=True, host='localhost', port=5555, threaded=True)
+    #app.run(debug=True, host='localhost', port=5555, threaded=True)

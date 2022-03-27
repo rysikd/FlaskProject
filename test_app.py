@@ -14,8 +14,8 @@ def login_page():
 
     if request.method == 'GET':
         return render_template('index.html', \
-            title='Bootstrap', \
-            message='Hello! Bootstrap!', \
+            title=__name__, \
+            message='test作成hp', \
             data = f_data)
 
     elif request.method == 'POST':

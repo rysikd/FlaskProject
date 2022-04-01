@@ -17,8 +17,9 @@
 {% block footer %}
 <footer class="bg-info">
     <ul class="nav pull-right">
+        <li class="m-3"><a class="text-white" href=".">Home</a></li>
     {% for remarks in data %}
-        <li class="m-3"><a class="text-white" href={{remark}}>{{remarks}}</a></li>
+        <li class="m-3"><a class="text-white" href={{remarks}}>{{remarks}}</a></li>
     {% endfor %}
     </ul>
 </footer>
